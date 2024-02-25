@@ -1,0 +1,136 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'static/main.css' %}">
+  <script src="{% static 'static/main.js' %}" defer></script>
+  <title>Formulario JS</title>
+</head>
+
+<body>
+  <header class="cabecera">
+    <h1>Validaciones JS</h1>
+  </header>
+  <main>
+    <section class="card">
+      <div class="card__parrafo">
+        <ul class="list">
+          <p>Los campos se validarán de la siguiente manera:
+            <li class="list__item">
+              <p><strong>Ficha:</strong> Se puede ingresar cualquier caracter.</p>
+            </li>
+            <li>
+              <p><strong>Nombre:</strong> Solo se puede ingresar letras.</p>
+            </li>
+            <li>
+              <p><strong>Apellidos:</strong> Solo se puede ingresar letras.</p>
+            </li>
+            <li>
+              <p><strong>Teléfono:</strong> Solo se puede ingresar números.</p>
+            </li>
+            <li>
+              <p><strong>Genero:</strong> Solo se puede generar un genero.</p>
+            </li>
+            <li>
+              <p><strong>Ciudad:</strong> Solo se puede seleccionar una ciudad.</p>
+            </li>
+            <li>
+              <p><strong>Habilidades:</strong> Se tiene que seleccionar como minimo 3 habilidades.</p>
+            </li>
+          </p>
+        </ul>
+      </div>
+      <div class="card__form">
+        <form action="validacion.js" method="get" class="contenedor">
+          <div class="contenedor">
+            <label for="ficha">Número de ficha:</label>
+            <input type="text" id="ficha" name="ficha_aprendiz" title="Ingresa en formato cod_12345" class="entrada"
+              required />
+          </div>
+          <div class="contenedor">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="user_name" title="Ingresa tu nombre" pattern="[A-Za-z]+"
+              class="entrada" required />
+          </div>
+          <div class="contenedor">
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="user_lastname" title="Ingresa tus apellidos" pattern="[A-Za-z]+"
+              class="entrada" required />
+          </div>
+          <div class="contenedor">
+            <label for="email">Correo:</label>
+            <input type="email" id="email" name="user_email" title="Ingresa tu correo electrónico" class="entrada"
+              required />
+          </div>
+          <div class="contenedor">
+            <label for="tel">Teléfono:</label>
+            <input type="tel" id="tel" name="user_phone" title="Ingresa tu número telefonico" pattern="[0-9]{10, 10}"
+              maxlength="10" class="entrada" required />
+          </div>
+          <div class="contenedor2" title="Selecciona tu genero">
+            <label for="genero">Genero:</label>
+            <label for="hombre">Hombre</label>
+            <input type="radio" id="hombre" name="genero" value="hombre" required />
+            <label for="mujer">Mujer</label>
+            <input type="radio" id="mujer" name="genero" value="mujer" />
+            <label for="otro">Otro</label>
+            <input type="radio" id="otro" name="genero" value="otro" />
+          </div>
+          <div class="contenedor" title="Selecciona tu ciudad">
+            <label for="ciudad">Ciudad:</label>
+            <select name="user_city" id="ciudad" required>
+              <option value="bogota">Bogotá</option>
+              <option value="bmanga">Bucaramanga</option>
+              <option value="cali">Cali</option>
+              <option value="medellin" selected>Medellin</option>
+            </select>
+          </div>
+          <div class="contenedor">
+            <label for="skill">Seleccione minimo 3 habilidades:</label>
+            <div>
+              <input type="checkbox" id="skill" name="HTML" />
+              <label for="HTML">HTML</label>
+            </div>
+            <div>
+              <input type="checkbox" id="skill" name="CSS" />
+              <label for="CSS">CSS</label>
+            </div>
+            <div>
+              <input type="checkbox" id="skill" name="JavaScript" />
+              <label for="JavaScript">JavaScript</label>
+            </div>
+            <div>
+              <input type="checkbox" id="skill" name="PHP" />
+              <label for="PHP">PHP</label>
+            </div>
+            <div>
+              <input type="checkbox" id="skill" name="JAVA" />
+              <label for="JAVA">JAVA</label>
+            </div>
+            <div>
+              <input type="checkbox" id="skill" name="SQL" />
+              <label for="SQL">SQL</label>
+            </div>
+            <div>
+              <input type="checkbox" id="skill" name="UML" />
+              <label for="UML">UML</label>
+            </div>
+          </div>
+          <div class="card">
+            <button type="submit" title="Enviar formulario" class="boton">Enviar</button>
+            <button type="reset" title="Restablecer los campos" class="boton">Restablecer</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="pie"></footer>
+  <script src="main.js"></script>
+</body>
+
+</html>
