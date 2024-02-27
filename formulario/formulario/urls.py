@@ -16,8 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from catalog import views
-
+from formulario import views
 '''
 from django.views.generic import RedirectView
 from django.conf import settings
@@ -25,7 +24,7 @@ from django.conf.urls.static import static
 '''
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('catalog/', views.validar, name="validar")
+    path('formulario/', views.validar, name="validar")
 ]
 """"
 urlpatterns += [
