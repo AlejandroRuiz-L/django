@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'main.css' %}">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <div>
+      <a href="/"><img src="static/logo_4.jpg" alt="Logo" class="contenedor__logo"></a>
+    </div>
+    <div class="perfil-box">
+      <a href="/" class="boton">Inicio</a>
+      <a href="portafolio.html" class="boton">Portafolio</a>
+    </div>
+  </header>
+  <aside class="aside">
+    <form action="/" method="get" class="contenedor__datos">
+      <div>
+        <label for="busqueda">Busca en todos los contactos:</label>
+      </div>
+      <div>
+        <input type="search" id="busqueda" name="busqueda_contacto" placeholder="Nombre del contacto" />
+      </div>
+      <div>
+        <input type="submit" class="aside__form__boton" placeholder="hl" />
+      </div>
+    </form>
+  </aside>
+</body>
+
+</html>

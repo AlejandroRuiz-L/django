@@ -1,5 +1,5 @@
 """
-URL configuration for secciones project.
+URL configuration for landing project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -16,13 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from herencia.views import *
+from origin import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', inicio, name='index'),
-    path('nosotros/', nosotros, name='nosotros'),
-    path('servicios/', servicios, name='servicios'),
-    path('blog/', blog, name='blog'),
-    path('contacto/', contacto, name='contacto')
+    path("", views.inicio, name="Inicio"),
+    path("portafolio/", views.portafolio, name="Portafolio"),
+    path("contacto/", views.contacto, name="Contacto")
 ]
