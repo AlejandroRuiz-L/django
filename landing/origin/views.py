@@ -9,3 +9,6 @@ def portafolio(request):
 
 def contacto(request):
   return render(request, 'contacto.html', {})
+
+def perfil(request):
+  return render(request, 'perfil.html', {})

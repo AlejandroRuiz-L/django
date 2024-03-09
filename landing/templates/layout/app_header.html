@@ -12,11 +12,12 @@
 <body>
   <header>
     <div>
-      <a href="/"><img src="static/logo_4.jpg" alt="Logo" class="contenedor__logo"></a>
+      <a href="/"><img src= "{% static "logo_4.jpg" %}" alt="Logo" class="contenedor__logo"></a>
     </div>
     <div class="perfil-box">
-      <a href="/" class="boton">Inicio</a>
-      <a href="portafolio.html" class="boton">Portafolio</a>
+      <a href="{% url 'Inicio' %}" class="boton">Inicio</a>
+      <a href="{% url 'Portafolio' %}" class="boton">Portafolio</a>
+      <a href="{% url 'Mi_perfil' %}" class="boton">Mi perfil</a>
     </div>
   </header>
   <aside class="aside">

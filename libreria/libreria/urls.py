@@ -1,5 +1,5 @@
 """
-URL configuration for landing project.
+URL configuration for libreria project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -16,12 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from origin import views
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", views.inicio, name="Inicio"),
-    path('portafolio/', views.portafolio, name="Portafolio"),
-    path("contacto/", views.contacto, name="Contacto"),
-    path("perfil/", views.perfil, name='Mi_perfil')
+    path("", views.index, name="Inicio"),
+    path("biblioteca/", views.biblioteca, name="Biblioteca"),
+    path("login/", views.login, name="Login")
 ]
