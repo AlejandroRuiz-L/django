@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'main.css' %}">
+  <title>Librería</title>
+</head>
+<body>
+  {% include 'layout/app_header.html' %}
+  <main>
+    <section>
+      <div class="banner">
+        <div class="contenedor">
+          <img src="{% static 'CAS_GGMarquez.png' %}" alt="Cien años de soledad">
+          <p>Titulo: Cien Años de Soledad</p>
+          <p>Autor: Gabriel Garcia Marquez.</p>
+        </div>
+        <div>
+          <img src="{% static 'ATC_GGMarquez.png' %}" alt="Portada">
+          <p>Titulo: El amor en los tiempos del cólera.</p>
+          <p>Autor: Gabriel Garcia Marquez.</p>
+        </div>
+        <div>
+          <img src="{% static 'HI_HGWells.png' %}" alt="El hombre invisible">
+          <p>Titulo: El hombre invisible</p>
+          <p>Autor: H. G. Wells</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div>
+        <div class="contenedor">
+          <img src="{% static 'HP1_JKRowling.png' %}" alt="Harry Potter 1">
+          <p>Titulo: Harry Potter y la piedra filosofal.</p>
+          <p>Autor: J. K. Rowling.</p>
+        </div>
+        <div>
+          <img src="{% static 'HP2_JKRowling.png' %}" alt="Harry potter 2">
+          <p>Titulo: Harry Potter y la camara secreta.</p>
+          <p>Autor: J. K. Rowling</p>
+        </div>
+        <div>
+          <img src="{% static 'HP3_JKRowling.png' %}" alt="Harry Potter 3">
+          <p>Titulo: Harry Potter y el prisionero de azkaban</p>
+          <p>Autor: J. K. Rowling.</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div>
+        <div class="contenedor">
+          <img src="{% static 'HP4_JKRowling.png' %}" alt="Harry Potter 4">
+          <p>Titulo: Harry Potter y el caliz de fuego.</p>
+          <p>Autor: J. K. Rowling.</p>
+        </div>
+        <div>
+          <img src="{% static 'HP5_JKRowling.png' %}" alt="Harry potter 5">
+          <p>Titulo: Harry Potter y la orden del fenix.</p>
+          <p>Autor: J. K. Rowling</p>
+        </div>
+        <div>
+          <img src="{% static 'HP6_JKRowling.png' %}" alt="Harry Potter 6" class="portada" >
+          <p>Titulo: Harry Potter y el misterio del principe.</p>
+          <p>Autor: J. K. Rowling.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

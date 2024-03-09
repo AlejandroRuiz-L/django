@@ -1,20 +1,16 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{% static 'main.css' %}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&family=Roboto+Mono:wght@100&display=swap"
-    rel="stylesheet">
-  <title>Biblioteca virtual</title>
+  <title>Login</title>
 </head>
 <body>
   <header>
-    <img src="{% static 'logo_biblioteca.jpg'%}" alt="logo_biblioteca" class="logo">
+    <img src="{% static 'logo_biblioteca.png'%}" alt="logo_biblioteca" class="logo">
     <a href="{% url 'Biblioteca' %}">Biblioteca</a>
   </header>
   <main>
@@ -33,7 +29,7 @@
         </div>
         <div class="form__item">
           <p>Olvidaste tu contraseña?</p>
-          <a href="{% url 'Recuperar_contraseña' %}">Recuperar contraseña</a>
+          <a href="{% url 'Recuperar' %}">Recuperar contraseña</a>
         </div>
       </form>
     </section>

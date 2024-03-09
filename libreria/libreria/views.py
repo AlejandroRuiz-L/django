@@ -14,3 +14,6 @@ def registro(request):
 
 def contacto(request):
   return render(request, 'contacto.html', {})
+
+def recuperar(request):
+  return render(request, 'recuperar_contraseña.html', {})

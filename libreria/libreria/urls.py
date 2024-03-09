@@ -22,5 +22,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", views.index, name="Inicio"),
     path("biblioteca/", views.biblioteca, name="Biblioteca"),
-    path("login/", views.login, name="Login")
+    path("login/", views.login, name="Login"),
+    path("registro/", views.registro, name="Registro"),
+    path("contacto/", views.contacto, name="Contacto"),
+    path('recuperar_contrasena/', views.recuperar, name="Recuperar")
+
 ]
