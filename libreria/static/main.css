@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .header{
   display: flex;
   justify-content: space-around;
@@ -25,7 +30,13 @@ a:hover{
 }
 
 .perfil{
+  display: flex;
+  flex-direction: column;
+}
+
+.perfil__foto{
   max-height: 120px;
+  border-radius: 40px;
 }
 
 .boton{
@@ -33,6 +44,17 @@ a:hover{
   border: 2px solid black;
   color: black;
   border-radius: 10px;
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+}
+
+.boton:hover{
+  background-color: rgb(20, 115, 192);
+}
+
+.boton:active{
+  transform: scale(1.1);
 }
 
 .aside{
@@ -77,5 +99,5 @@ a:hover{
 }
 
 .contenedor:hover{
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
