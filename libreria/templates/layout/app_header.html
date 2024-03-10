@@ -9,10 +9,13 @@
   <title>Header</title>
 </head>
 <body>
-  <header>
-    <img src="{% static 'logo_biblioteca.png' %}" alt="Logo libreria" class="logo">
-    <a href="{% url 'Inicio' %}">Inicio</a>
-    <a href="{% url 'Biblioteca' %}">Biblioteca</a>
+  <header class="header">
+    <img src="{% static 'assets/logo_biblioteca.png' %}" alt="Logo libreria" class="logo">
+    <a href="{% url 'Inicio' %}" class="boton">Inicio</a>
+    <a href="{% url 'Biblioteca' %}" class="boton">Biblioteca</a>
   </header>
+  <aside class="aside">
+    <img src="{% static 'assets/face_1.jpg' %}" alt="Foto de perfil" class="perfil">
+  </aside>
 </body>
 </html>
