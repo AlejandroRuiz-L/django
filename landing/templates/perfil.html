@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'main.css' %}">
+  <title>Landing</title>
+</head>
+
+<body>
+  {% include 'layout/app_header.html' %}
+  <main>
+    <section>
+      <div class="contenedor">
+        <img src= {% static 'face_1.jpg' %} alt="Foto de perfil" class="foto">
+        <p>Brayan Alejandro Ruiz Lenis</p>
+        <p>23 años</p>
+      </div>
+    </section>
+  </main>
+  {% include 'layout/app_footer.html' %}
+</body>
+
+</html>

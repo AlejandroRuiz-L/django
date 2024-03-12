@@ -36,7 +36,7 @@ a{
 .contenedor{
   display: flex;
   justify-content: space-around;
-  border: 3px solid #333;
+  border: 3px solid #333;/*rgb(14, 116, 199);*/
   width: 25em;
   box-shadow: 8px 8px 5px #444;
   padding: 8px 12px;
@@ -93,7 +93,7 @@ li{
 }
 
 a:hover{
-  color: white;
+  color: rgb(211, 211, 211);
 }
 
 .boton{
@@ -114,4 +114,9 @@ a:hover{
 .foto{
   max-height: 180px;
   border-radius: 20px;
+}
+
+.perfil{
+  max-height: 190px;
+  border-radius: 34px;
 }

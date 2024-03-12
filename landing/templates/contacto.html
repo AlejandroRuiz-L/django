@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Contacto</title>
 </head>
 
 <body>
+    {% include 'layout/app_header' %}
   <main>
-  {% include 'layout/app_header' %}
-  <section>
-    <form action="/" method="post">
-      <div>
-      <label for="name">Nombre: </label>
-    </form>
-  </section>
-  {% include 'layout/app_footer' %}
+    <section>
+      <form action="/" method="post">
+        <div>
+          <label for="name">Nombre: </label>
+          <input id="name" name="user_name" type="text" />
+        </div>
+        <div>
+          <label for="lastname">Apellido: </label>
+          <input id="lastname" name="user_lastname" type="text" />
+        </div>
+      </form>
+    </section>
+    {% include 'layout/app_footer' %}
   </main>
 </body>
 

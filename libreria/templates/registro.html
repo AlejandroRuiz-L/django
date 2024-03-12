@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'main.css' %}">
+  <script src="{% static 'formulario_registro.js' %}" defer ></script>
+  <title>Registrate</title>
+</head>
+<body>
+  <header>
+    <img src="{% static 'logo_biblioteca.png'%}" alt="logo_biblioteca" class="logo">
+    <a href="{% url 'Inicio' %}">Inicio</a>
+  </header>
+  <main>
+    <section>
+	  <form method="post" action="{% url 'Inicio' %}" class="form">
+	    <div>
+	      <label for="user">Nombre de usuario</label>
+		  <input type="text" id="user" name="user_name" required />
+	    </div>
+		<div>
+		  <label for="password">Contraseña</label>
+		  <input type="password" id="password" name="user_password" required />
+		</div>
+		<div>
+		  <label for="email">Email<label>
+		  <input type="email" id="email" name="user_email" required />
+		</div>
+		<div>
+		  <button type="submmit" class="boton">Registrarse<button>
+		  <button type="reset" class="boton">Restablecer<button>
+		</div>
+	  </form>
+	</section>
+  </main>
+</body>
+</html>
