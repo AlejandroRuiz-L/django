@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 
 # Create your views here.
 def inicio(request):
@@ -12,3 +12,6 @@ def contacto(request):
 
 def perfil(request):
   return render(request, 'perfil.html', {})
+
+def consulta(request):
+  return HttpResponse('')

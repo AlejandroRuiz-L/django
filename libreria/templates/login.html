@@ -6,13 +6,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{% static 'main.css' %}">
-  <script src="{% static 'formulario_login.js' %}" defer ></script>
   <title>Login</title>
 </head>
 <body>
   <header>
     <img src="{% static 'logo_biblioteca.png'%}" alt="logo_biblioteca" class="logo">
-    <a href="{% url 'Inicio' %}">Inicio</a>
+    <a href="{% url 'Biblioteca' %}">Biblioteca</a>
   </header>
   <main>
     <section>
@@ -27,15 +26,11 @@
         </div>
         <div>
           <button type="subbmit" class="button">Ingresar</button>
-		  <button type="reset" class="button">Restablecer</button>
         </div>
         <div class="form__item">
           <p>Olvidaste tu contraseña?</p>
           <a href="{% url 'Recuperar' %}">Recuperar contraseña</a>
         </div>
-		<div class="form__item">
-		  <p>Aún no tienes una cuenta?</p>
-		  <a href="{% static 'Registro' %}">Registrate ahora</a>
       </form>
     </section>
   </main>
