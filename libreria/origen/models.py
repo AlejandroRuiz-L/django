@@ -18,9 +18,9 @@ class Genre(models.Model):
 class Book(models.Model):
   title = models.CharField(max_length=200)
   author = models.ForeignKey('Author', on_delete=models.SET_NULL, null=True)
-  date = models.DateField(default=date.today)
+  date = models.DateField(default='1900-01-01')
   summary = models.TextField(max_length=1000, help_text='Ingrese una breve descripcion del libro')
-  isbn = models.CharField('ISBN', max_length=13)
+  isbn = models.CharField('ISBN', max_length=30)
   genre = models.ManyToManyField(Genre, help_text="Seleccione un genero para el libro")
 
   def __str__(self):
@@ -42,7 +42,6 @@ class Author(models.Model):
   last_name = models.CharField(max_length=100, null=True)
   date_of_birth = models.DateField(null=True, blank=True)
   date_of_death = models.DateField('Died', null=True, blank=True)
-  email = models.EmailField(null=True)
 
   def get_absolute_url(self):
     """retorna la URL para acceder a una instancia particular del autor"""
