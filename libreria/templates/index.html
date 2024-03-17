@@ -8,12 +8,15 @@
   <!--<link rel="stylesheet" href="{% static 'main.css' %}">-->
   <title>Inicio</title>
 </head>
+
 <body>
   {% include 'layout/app_header.html' %}
   <main>
     <section>
-      
+      <a href="{% url 'Consultar' %}">Consultar</a>
     </section>
   </main>
+  {% include 'layout/app_footer.html' %}
 </body>
+
 </html>

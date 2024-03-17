@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta</title>
+</head>
+
+<body>
+  {% include 'layout/app_header.html' %}
+  <p>Consulta realizada</p>
+  <ul>
+    {% for author in authors %}
+    <li>
+      {{author}}
+    </li>
+    {% endfor %}
+  </ul>
+  <!--
+  <ul>
+    {% for libro in libros %}
+    <li>
+      <div class="contenedor">
+        <a href="{% static 'Carrito' %}"><img src="{% static 'assets/CAS_GGMarquez.png' %}" alt="Cien años de soledad"
+            class="portada"></a>
+        <div class="contenedor__info">
+          <p>Titulo: {{ libro.title }}</p>
+          <p>Autor: {{libro.author.fist_name}}{{libro.author.last_name}}</p>
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+-->
+</body>
+
+</html>

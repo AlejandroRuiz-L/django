@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
+from origen import views as v
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,6 +26,7 @@ urlpatterns = [
     path("login/", views.login, name="Login"),
     path("registro/", views.registro, name="Registro"),
     path("contacto/", views.contacto, name="Contacto"),
-    path('recuperar_contrasena/', views.recuperar, name="Recuperar")
+    path('recuperar_contrasena/', views.recuperar, name="Recuperar"),
+    path('consulta/', v.consultar, name="Consultar")
 
 ]
