@@ -10,7 +10,8 @@
 
 <body>
   {% include 'layout/app_header.html' %}
-  <p>Consulta realizada</p>
+  <p>Consulta realizada:</p>
+  <!--
   <ul>
     {% for author in authors %}
     <li>
@@ -18,7 +19,8 @@
     </li>
     {% endfor %}
   </ul>
-  <!--
+-->
+<!--
   <ul>
     {% for libro in libros %}
     <li>
@@ -34,6 +36,14 @@
     {% endfor %}
   </ul>
 -->
+{{ img }}
+  <ul>
+    {% for libro in lb %}
+      <li>
+        {{libro}}
+      </li>
+      {% endfor %}
+  </ul>
 </body>
 
 </html>

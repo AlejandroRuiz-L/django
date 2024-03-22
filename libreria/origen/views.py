@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from origen.models import *
+from static.img import libros as lb, img
 
 # Create your views here.
 def consultar(request):
@@ -10,4 +11,4 @@ def consultar(request):
   query = Book.objects.all()
   for libro in query:
     libros.append(libro)
-  return render(request, 'books/consulta.html', {'libros':libros, 'authors':authors})
+  return render(request, 'books/consulta.html', {'libros':libros, 'authors':authors, 'lb':lb, 'img':img})
